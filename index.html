@@ -1,475 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Zig Zag Café — Epsom</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zig Zag Café | Coffee &amp; Crêpes in Epsom</title>
+<meta name="description" content="Independent café at 16 High Street, Epsom. Sweet and savoury crêpes, breakfast, lunch and great coffee. Eat in, take away or order delivery.">
+<meta property="og:title" content="Zig Zag Café, Epsom">
+<meta property="og:description" content="Coffee &amp; crêpes on Epsom High Street.">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Zig Zag Café","servesCuisine":["Crêpes","Café"],"telephone":"+441372749470","address":{"@type":"PostalAddress","streetAddress":"16 High Street","addressLocality":"Epsom","postalCode":"KT19 8AH","addressCountry":"GB"},"openingHours":["Mo-Fr 08:30-15:30","Sa 08:30-16:00"],"sameAs":["https://www.facebook.com/zigzagepsom/","https://www.instagram.com/zigzagcafeepsom/"]}
+</script>
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="navbar">
-
-    <a href="#" class="logo">
-        <span>ZIG</span>
-        <span>ZAG</span>
-    </a>
-
-    <nav id="navMenu">
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#visit">Visit</a>
-    </nav>
-
-    <a href="#menu" class="nav-button">View Menu</a>
-
-    <button class="menu-toggle" id="menuToggle">
-        ☰
-    </button>
-
+<header class="nav" id="nav">
+  <a href="#top" class="brand">Zig Zag <small>Coffee &amp; Crêpes</small></a>
+  <nav id="navMenu" aria-label="Main">
+    <a href="#menu">Menu</a>
+    <a href="#order">Order</a>
+    <a href="#about">About</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <span class="status" data-status></span>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span></button>
 </header>
 
-
-<main>
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <p class="eyebrow">CAFÉ • CREPES • COFFEE</p>
-
-            <h1>
-                Good food.
-                <br>
-                Good coffee.
-                <br>
-                <em>Good company.</em>
-            </h1>
-
-            <p class="hero-text">
-                A cosy independent café in the heart of Epsom,
-                serving sweet and savoury crepes, fresh lunches,
-                great coffee and more.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#menu" class="button primary">
-                    Explore the menu
-                </a>
-
-                <a href="#visit" class="button secondary">
-                    Find us
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="hero-image">
-
-            <div class="image-card">
-
-                <div class="food-placeholder">
-		    <img src="pic1.png" alt="Zig Zag Café">
-		</div>
-
-                <div class="image-caption">
-                    <strong>Made fresh.</strong>
-                    <span>Right here in Epsom.</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- QUICK INFO -->
-
-    <section class="quick-info">
-
-        <div>
-            <span>☕</span>
-            <strong>Fresh coffee</strong>
-            <small>Made to order</small>
-        </div>
-
-        <div>
-            <span>🥞</span>
-            <strong>Sweet & savoury</strong>
-            <small>Crepes for everyone</small>
-        </div>
-
-        <div>
-            <span>🥗</span>
-            <strong>Fresh lunches</strong>
-            <small>Salads, soups & more</small>
-        </div>
-
-        <div>
-            <span>📍</span>
-            <strong>Central Epsom</strong>
-            <small>16 High Street</small>
-        </div>
-
-    </section>
-
-
-    <!-- MENU -->
-
-    <section class="menu-section" id="menu">
-
-        <div class="section-heading">
-
-            <p class="eyebrow">WHAT'S COOKING</p>
-
-            <h2>
-                Something for
-                <em>everyone.</em>
-            </h2>
-
-            <p>
-                From a quick coffee to a proper lunch,
-                there's plenty to choose from.
-            </p>
-
-        </div>
-
-
-        <div class="menu-grid">
-
-            <article class="menu-card featured">
-
-                <div class="menu-icon">🥞</div>
-
-                <h3>Crepes</h3>
-
-                <p>
-                    Sweet or savoury, freshly made and
-                    packed with flavour.
-                </p>
-
-                <span>Explore crepes →</span>
-
-            </article>
-
-
-            <article class="menu-card">
-
-                <div class="menu-icon">🍳</div>
-
-                <h3>Breakfast</h3>
-
-                <p>
-                    Start the day with eggs, toast,
-                    breakfast crepes and more.
-                </p>
-
-                <span>See breakfast →</span>
-
-            </article>
-
-
-            <article class="menu-card">
-
-                <div class="menu-icon">🥪</div>
-
-                <h3>Lunch</h3>
-
-                <p>
-                    Paninis, baguettes, salads,
-                    homemade soups and more.
-                </p>
-
-                <span>See lunch →</span>
-
-            </article>
-
-
-            <article class="menu-card">
-
-                <div class="menu-icon">☕</div>
-
-                <h3>Drinks</h3>
-
-                <p>
-                    Coffee, fresh juices, smoothies
-                    and cold drinks.
-                </p>
-
-                <span>See drinks →</span>
-
-            </article>
-
-        </div>
-
-
-        <div class="popular">
-
-            <div class="popular-heading">
-
-                <p class="eyebrow">POPULAR PICKS</p>
-
-                <h2>People love these.</h2>
-
-            </div>
-
-
-            <div class="food-list">
-
-                <div class="food-item">
-
-                    <div>
-                        <h3>Feta & Spinach Crepe</h3>
-                        <p>A savoury favourite.</p>
-                    </div>
-
-                    <strong>£9.30</strong>
-
-                </div>
-
-
-                <div class="food-item">
-
-                    <div>
-                        <h3>Big Breakfast Crepe</h3>
-                        <p>Bacon, eggs, cheese, tomato & mushrooms.</p>
-                    </div>
-
-                    <strong>£10.90</strong>
-
-                </div>
-
-
-                <div class="food-item">
-
-                    <div>
-                        <h3>Nutella, Cream & Banana Crepe</h3>
-                        <p>A sweet classic.</p>
-                    </div>
-
-                    <strong>£9.90</strong>
-
-                </div>
-
-
-                <div class="food-item">
-
-                    <div>
-                        <h3>Chicken Mexican Panini</h3>
-                        <p>Freshly prepared and served with salad.</p>
-                    </div>
-
-                    <strong>£8.65</strong>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section class="about" id="about">
-
-        <div class="about-image">
-
-            <div class="about-placeholder">
-                <img src="pic2.png" alt="Zig Zag Café">
-            </div>
-
-        </div>
-
-
-        <div class="about-content">
-
-            <p class="eyebrow">A LITTLE ABOUT US</p>
-
-            <h2>
-                Your local
-                <em>favourite.</em>
-            </h2>
-
-            <p>
-                Zig Zag Café is an independent café in the
-                heart of Epsom, bringing together French and
-                Mediterranean-inspired food with a relaxed,
-                welcoming atmosphere.
-            </p>
-
-            <p>
-                Whether you're meeting friends for brunch,
-                grabbing lunch or simply stopping for coffee,
-                pull up a chair and stay a while.
-            </p>
-
-            <a href="#visit" class="text-link">
-                Come and say hello →
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- FEATURES -->
-
-    <section class="features">
-
-        <div class="feature">
-
-            <span>🌱</span>
-
-            <h3>Vegetarian options</h3>
-
-            <p>
-                Plenty of meat-free choices.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <span>🌿</span>
-
-            <h3>Vegan options</h3>
-
-            <p>
-                Options available across the menu.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <span>♡</span>
-
-            <h3>Gluten-free options</h3>
-
-            <p>
-                Gluten-free choices available.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <span>📶</span>
-
-            <h3>Free Wi-Fi</h3>
-
-            <p>
-                Stay for a coffee and get comfortable.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- VISIT -->
-
-    <section class="visit" id="visit">
-
-        <div class="visit-content">
-
-            <p class="eyebrow">COME SAY HELLO</p>
-
-            <h2>
-                Find us in
-                <em>Epsom.</em>
-            </h2>
-
-            <p>
-                16 High Street
-                <br>
-                Epsom
-                <br>
-                KT19 8AH
-            </p>
-
-            <a href="tel:01372749470" class="phone">
-                01372 749470
-            </a>
-
-        </div>
-
-
-        <div class="hours">
-
-            <h3>Opening hours</h3>
-
-            <div class="hours-row">
-                <span>Monday – Friday</span>
-                <strong>8:30 – 15:30</strong>
-            </div>
-
-            <div class="hours-row">
-                <span>Saturday</span>
-                <strong>8:30 – 16:00</strong>
-            </div>
-
-            <div class="hours-row">
-                <span>Sunday</span>
-                <strong>Closed</strong>
-            </div>
-
-            <a
-                href="https://www.google.com/maps/search/?api=1&query=16+High+Street+Epsom+KT19+8AH"
-                target="_blank"
-                class="button primary map-button"
-            >
-                Open in Maps →
-            </a>
-
-        </div>
-
-    </section>
-
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-text">
+    <h1>Crêpes, coffee and a table by the window.</h1>
+    <p>An independent café on Epsom High Street. French and Mediterranean-inspired food, made fresh, in a relaxed room where you're welcome to stay.</p>
+    <div class="actions">
+      <a class="btn solid" href="#menu">See the menu</a>
+      <a class="btn line" href="#order">Order delivery</a>
+    </div>
+    <p class="status big" data-status></p>
+  </div>
+  <figure class="hero-logo">
+    <img src="logo.png" width="449" height="449" alt="Zig Zag, Coffee and Crêpes logo in a teal frame">
+  </figure>
+</section>
+
+<div class="zig" aria-hidden="true"></div>
+
+<section class="sec" id="menu">
+  <div class="head">
+    <h2>The menu</h2>
+    <p>Sweet and savoury crêpes, breakfast, lunch and drinks.</p>
+  </div>
+  <p class="preview"><strong>Preview only.</strong> These are sample dishes with no prices. The café's full menu goes here.</p>
+  <div class="tabs" role="tablist" aria-label="Menu sections" id="tabs"></div>
+  <div class="items" id="items" role="tabpanel" aria-live="polite"></div>
+</section>
+
+<section class="order" id="order">
+  <div>
+    <h2>Not near the High Street?</h2>
+    <p>Order from Zig Zag on your favourite delivery app.</p>
+  </div>
+  <div class="actions">
+    <a class="btn solid" href="https://www.ubereats.com/gb/store/zig-zag-cafe/R_im6xF_QJuI8ruPAkEFmQ" target="_blank" rel="noopener">Order on Uber Eats</a>
+    <a class="btn solid" href="https://deliveroo.co.uk/menu/london/epsom/zig-zag-cafe" target="_blank" rel="noopener">Order on Deliveroo</a>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="about-art" aria-hidden="true"><span>Coffee<br>&amp; Crêpes</span></div>
+  <div class="about-text">
+    <h2>Your local, on the High Street.</h2>
+    <p>Zig Zag is an independent café bringing French and Mediterranean-inspired food to the middle of Epsom, with a relaxed, welcoming atmosphere.</p>
+    <p>Meeting friends for brunch, grabbing lunch or stopping for a coffee, pull up a chair and stay a while.</p>
+    <ul class="facts">
+      <li>Sweet and savoury crêpes</li>
+      <li>Breakfast and lunch</li>
+      <li>Fresh coffee, made to order</li>
+      <li>Free Wi-Fi</li>
+    </ul>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div>
+    <h2>Find us</h2>
+    <address>16 High Street<br>Epsom<br>KT19 8AH</address>
+    <p><a class="phone" href="tel:01372749470">01372 749470</a></p>
+    <div class="actions">
+      <a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=16+High+Street+Epsom+KT19+8AH" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn ghost" href="tel:01372749470">Call us</a>
+    </div>
+  </div>
+  <div class="hours">
+    <h3>Opening hours</h3>
+    <dl id="hours"></dl>
+  </div>
+</section>
 </main>
 
-
 <footer>
-
-    <div class="footer-logo">
-        ZIG ZAG
-    </div>
-
-    <p>
-        Independent café · Epsom
-    </p>
-
-    <div class="footer-links">
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#visit">Visit</a>
-    </div>
-
-    <small>
-        © 2026 Zig Zag Café
-    </small>
-
+  <img src="logo.png" width="72" height="72" alt="" loading="lazy">
+  <p>Zig Zag Café, 16 High Street, Epsom</p>
+  <div class="links">
+    <a href="https://www.instagram.com/zigzagcafeepsom/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/zigzagepsom/" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.ubereats.com/gb/store/zig-zag-cafe/R_im6xF_QJuI8ruPAkEFmQ" target="_blank" rel="noopener">Uber Eats</a>
+    <a href="https://deliveroo.co.uk/menu/london/epsom/zig-zag-cafe" target="_blank" rel="noopener">Deliveroo</a>
+  </div>
+  <small>&copy; <span id="year">2026</span> Zig Zag Café</small>
 </footer>
 
-
 <script src="script.js"></script>
-
 </body>
 </html>
