@@ -61,7 +61,10 @@ addEventListener("scroll", () => nav.classList.toggle("stuck", scrollY > 10), { 
 
 /* ---------- Menu tabs ---------- */
 const tabs = $("#tabs"), items = $("#items");
+const SLUG = { "Crêpes": "crepes", Breakfast: "breakfast", Lunch: "lunch", Drinks: "drinks" };
 function show(cat) {
+  const f = `images/menu-${SLUG[cat]}.jpg`, pic = $("#menuPic"), box = $("#menuImg");
+  box.dataset.file = f; box.classList.remove("missing"); pic.src = f;
   tabs.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", b.dataset.cat === cat));
   items.innerHTML = MENU[cat].map(([n, d], i) =>
     `<div class="item" style="animation-delay:${i * 40}ms"><div><h3>${n}</h3><p>${d}</p></div><span class="price">${PRICE_PLACEHOLDER}</span></div>`
@@ -113,10 +116,13 @@ const links = [...menu.querySelectorAll("a")];
 const spy = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) links.forEach(a => a.classList.toggle("on", a.hash === "#" + e.target.id));
 }), { rootMargin: "-45% 0px -50% 0px" });
-["menu", "order", "about", "visit"].forEach(id => spy.observe($("#" + id)));
+["menu", "gallery", "about", "visit"].forEach(id => spy.observe($("#" + id)));
 
-/* ---------- One gentle reveal on the headline block ---------- */
-document.querySelector(".hero-text").classList.add("rv");
-requestAnimationFrame(() => requestAnimationFrame(() => document.querySelector(".hero-text").classList.add("show")));
+/* ---------- Image slots: show a labelled placeholder if a photo is missing ---------- */
+document.querySelectorAll(".ph img").forEach(img => {
+  const miss = () => img.parentElement.classList.add("missing");
+  img.addEventListener("error", miss);
+  if (img.complete && !img.naturalWidth) miss();
+});
 
 $("#year").textContent = new Date().getFullYear();
